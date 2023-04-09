@@ -2,21 +2,22 @@ import PropTypes from 'prop-types';
 
 import { Description } from '../Description/Description';
 import { Stats } from '../Stats/Stats';
+import { ProfileWrap } from './Profile.styled';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+export const Profile = props => {
   return (
-    <div className="profile">
+    <ProfileWrap>
       <Description
-        username={username}
-        tag={tag}
-        location={location}
-        avatar={avatar}
+        username={props.username}
+        tag={props.tag}
+        location={props.location}
+        avatar={props.avatar}
       />
       <Stats
-        followers={stats.followers}
-        views={stats.views}
-        likes={stats.likes}
+        followers={props.stats.followers}
+        views={props.stats.views}
+        likes={props.stats.likes}
       />
-    </div>
+    </ProfileWrap>
   );
 };
