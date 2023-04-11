@@ -1,29 +1,13 @@
 import PropTypes from 'prop-types';
-import { Title } from './Title/Title';
+import { StatisticsTitle } from './Title/Title';
+import { StatisticsList } from './StatisticsList/StatisticsList';
+import { StatisticsWrap } from './Statistics.styled';
 
-export const Statistics = statisticsData => {
-  console.log(statisticsData);
+export const Statistics = ({ statisticsData }) => {
   return (
-    <>
-      <Title title="Upload stats" />
-      <ul className="stat-list">
-        <li className="item">
-          <span className="label">.docx</span>
-          <span className="percentage">4%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
-      </ul>
-    </>
+    <StatisticsWrap>
+      <StatisticsTitle text="Upload stats" />
+      <StatisticsList statisticsData={statisticsData}></StatisticsList>
+    </StatisticsWrap>
   );
 };

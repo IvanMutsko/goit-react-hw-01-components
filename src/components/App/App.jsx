@@ -11,7 +11,7 @@ export const App = () => {
         <Profile userData={user} />
       </Section>
       <Section>
-        <Statistics StatisticsData={data} />
+        <Statistics statisticsData={data} />
       </Section>
     </>
   );

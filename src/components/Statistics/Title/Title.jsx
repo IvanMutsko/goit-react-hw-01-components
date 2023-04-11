@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
+import { Title } from './Title.styled';
 
-export const Title = ({ title }) => {
-  return <Title>{title}</Title>;
+export const StatisticsTitle = ({ text }) => {
+  return <>{text.length > 0 && <Title>{text}</Title>}</>;
 };
