@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import { Description } from '../Description/Description';
-import { Stats } from '../Stats/Stats';
+import { Description } from './Description/Description';
+import { Stats } from './Stats/Stats';
 import { ProfileWrap } from './Profile.styled';
 
 export const Profile = ({ userData }) => {
