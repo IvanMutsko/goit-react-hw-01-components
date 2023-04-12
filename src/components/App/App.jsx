@@ -16,7 +16,7 @@ export const App = () => {
         <Statistics statisticsData={data} />
       </Section> */}
       <Section>
-        <Friends friends={friends} />;
+        <Friends friends={friends} />
       </Section>
     </>
   );
