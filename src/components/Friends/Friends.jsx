@@ -16,3 +16,5 @@ export const Friends = ({ friends }) => {
     </FriendList>
   );
 };
+
+// ПРОПИСАТИ ПРОПТАЙПИ!!!!!

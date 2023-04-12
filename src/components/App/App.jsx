@@ -9,12 +9,12 @@ import { Friends } from 'components/Friends/Friends';
 export const App = () => {
   return (
     <>
-      {/* <Section>
+      <Section>
         <Profile userData={user} />
       </Section>
       <Section>
         <Statistics statisticsData={data} />
-      </Section> */}
+      </Section>
       <Section>
         <Friends friends={friends} />
       </Section>

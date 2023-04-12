@@ -11,3 +11,13 @@ export const Statistics = ({ statisticsData }) => {
     </StatisticsWrap>
   );
 };
+
+Statistics.propTypes = {
+  statisticsData: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};

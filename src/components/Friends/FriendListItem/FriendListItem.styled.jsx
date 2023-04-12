@@ -22,7 +22,6 @@ export const Status = styled.div`
   height: 30px;
   border-radius: 50%;
   background-color: ${({ active }) => {
-    console.log(active);
     return active ? '#AAFF00' : '#FF5733';
   }};
 `;
