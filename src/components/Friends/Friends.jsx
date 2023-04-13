@@ -17,4 +17,11 @@ export const Friends = ({ friends }) => {
   );
 };
 
-// ПРОПИСАТИ ПРОПТАЙПИ!!!!!
+Friends.propTypes = {
+  userData: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
+  }),
+};
