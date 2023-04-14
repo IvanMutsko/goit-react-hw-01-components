@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Body, BodyRow, Cell } from './TableBody.styled';
 
 export const TableBody = ({ transactions }) => {
@@ -12,4 +13,15 @@ export const TableBody = ({ transactions }) => {
       ))}
     </Body>
   );
+};
+
+TableBody.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };

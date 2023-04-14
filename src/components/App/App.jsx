@@ -11,7 +11,7 @@ import { TransactionHistory } from 'components/TransactionHistory/TransactionHis
 export const App = () => {
   return (
     <>
-      {/* <Section>
+      <Section>
         <Profile userData={user} />
       </Section>
       <Section>
@@ -19,7 +19,7 @@ export const App = () => {
       </Section>
       <Section>
         <Friends friends={friends} />
-      </Section> */}
+      </Section>
       <Section>
         <TransactionHistory items={transactions} />
       </Section>

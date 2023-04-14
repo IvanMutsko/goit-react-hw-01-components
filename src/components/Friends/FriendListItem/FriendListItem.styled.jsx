@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Item = styled.li`
+  max-width: 250px;
   display: flex;
   border: 5px solid #454b1b;
   border-radius: 10px;
