@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Item = styled.li`
-  max-width: 250px;
+  width: 250px;
   display: flex;
   border: 5px solid #454b1b;
   border-radius: 10px;
@@ -22,13 +22,11 @@ export const Status = styled.div`
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: ${({ active }) => {
-    return active ? '#AAFF00' : '#FF5733';
-  }};
+  background-color: ${({ active }) => (active ? '#AAFF00' : '#FF5733')};
 `;
 
 export const Avatar = styled.img`
-  /* display: block; */
+  display: block;
 `;
 
 export const FriendName = styled.p`

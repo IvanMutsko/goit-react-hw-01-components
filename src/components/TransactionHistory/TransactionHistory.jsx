@@ -1,14 +1,35 @@
 import PropTypes from 'prop-types';
 
-import { Table } from './Table/Table.styled';
-import { TableHead } from './TableHead/TableHead';
-import { TableBody } from './TableBody/TableBody';
+import {
+  Table,
+  TableHead,
+  TableHeadRow,
+  TableHeadTitle,
+  TableBody,
+  TableBodyRow,
+  TableBodyCell,
+} from './TransactionHistory.styled.jsx.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
     <Table>
-      <TableHead />
-      <TableBody transactions={items} />
+      <TableHead>
+        <TableHeadRow>
+          <TableHeadTitle>Type</TableHeadTitle>
+          <TableHeadTitle>Amount</TableHeadTitle>
+          <TableHeadTitle>Currency</TableHeadTitle>
+        </TableHeadRow>
+      </TableHead>
+
+      <TableBody>
+        {items.map(({ id, type, amount, currency }) => (
+          <TableBodyRow key={id}>
+            <TableBodyCell>{type}</TableBodyCell>
+            <TableBodyCell>{amount}</TableBodyCell>
+            <TableBodyCell>{currency}</TableBodyCell>
+          </TableBodyRow>
+        ))}
+      </TableBody>
     </Table>
   );
 };
@@ -21,5 +42,5 @@ TransactionHistory.propTypes = {
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
